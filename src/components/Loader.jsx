@@ -53,6 +53,9 @@ const Loader = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        setTimeout(()=>{
+            setLoading(false)
+        }, 2000)
         window.addEventListener("load", ()=>{
             setLoading(false)
         })
