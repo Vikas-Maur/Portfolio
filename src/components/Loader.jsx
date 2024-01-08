@@ -29,7 +29,7 @@ const LoaderComp = () => {
     }, []);
 
     return (
-        <div className="fixed top-0 left-0 w-[100vw] h-[100vh] backdrop-blur-md bg-white/30 flex flex-col justify-center items-center">
+        <div className="z-20 fixed top-0 left-0 w-[100vw] h-[100vh] backdrop-blur-md bg-white/30 flex flex-col justify-center items-center">
             <svg
                 width="150"
                 height="60"
@@ -50,11 +50,14 @@ const LoaderComp = () => {
 };
 
 const Loader = () => {
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        setTimeout(() => { setLoading(false) }, 1100)
+        window.addEventListener("load", ()=>{
+            setLoading(false)
+        })
     }, []);
+
 
     return <>{loading && <LoaderComp />}</>;
 };

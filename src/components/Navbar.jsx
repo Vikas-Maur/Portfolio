@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
-import Logo from './logo'
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false)
+
     return (
         <nav className="z-10 transition-all flex flex-col gap-8 sticky top-4 mt-4 backdrop-blur-md bg-amber-400/30 shadow-xl max-w-full mx-auto px-8 lg:px-10 py-6 lg:py-8 rounded-full ">
             <div className="flex">
