@@ -62,7 +62,7 @@ const Portfolio = () => {
         </Project>
         <Project
           title="Project 3: myCODEnotein"
-          subtitle="My technical blog for storing coidng notes."
+          subtitle="My technical blog for storing coding notes."
           link="https://mycodenotein.netlify.app/"
           image="/mycodenotein-logo.png"
           techs={[
